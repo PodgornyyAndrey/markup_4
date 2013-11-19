@@ -11,9 +11,9 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, heading-holder, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+figure, figheading-holder, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figheading-holder, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -83,7 +83,7 @@ body {
 
 #man-form {
 	float: right;
-	/*width: 168px;*/
+	/*width: 168px;*/		/*????*/
 	padding: 7px 5px;
 }
 
@@ -111,60 +111,69 @@ body {
 	background: -webkit-linear-gradient(top, #f9f9f9, #b6e4f7);
 }
 
-#navy {
-	background: url(../images/bg_navy.png);
+/* content */
+
+#main {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#nav-holder{
+	background: url(../images/bg-nav.jpg);
+	padding: 0 0 0 271px;
+}
+
+#nav {
 	height: 27px;
 }
 
-#navy ul {
-	margin: 0;
-	padding: 0 0 0 271px;
-	list-style: none;
+#nav ul {
+	overflow: hidden;
 }
 
-#navy li {
+
+#nav li {
 	float: left;
 	background: url(../images/navy_sep.png) no-repeat 0 9px;
 }
 
-#navy li:first-child{
+#nav li:first-child{
 	background: none;
 }
 
-#navy a {
+#nav a {
 	color: #eee;
 	line-height: 27px;
 	font-weight: 600;
-	margin: 0 14px;
+	margin: 0 13px;
 	text-decoration: none;
 }
 
-#navy li ul {
-	margin: 0;
+#nav li ul {
+	overflow: hidden;
 	padding: 9px;
-	list-style: none;
 	width: 154px;
 	border: 5px solid #fff;
-	overflow: hidden;
 	background: #777;
 	display: none;
 	position: absolute;
 	top: 100%;
-	left: 0;
+	left:0;
 }
 
-#navy li li:first-child {
+#nav li li:first-child {
 	background: #777;
 }
 
-#navy li ul li {
+#nav li ul li {
 	clear: both;
 	display: block;
 	background: #777;
 	width: 100%;
 }
 
-#navy li ul a {
+#nav li ul a {
 	display: block;
 	margin: 0;
 	padding-left: 11px;
@@ -172,79 +181,84 @@ body {
 	font-size: 11px;
 }
 
-#navy li ul a:hover {
+#nav li ul a:hover {
 	background: #999;
 }
 
-#navy li:hover {
+#nav li:hover {
 	position: relative;
 }
 
-#navy li:hover ul {
+#nav li:hover ul {
 	display: block;
 }
 
-
-
-#main {
-	width: 960px;
-	margin: 0 auto;
-	z-index: 10;
-	overflow: hidden;
+#twocolumn {
+	background: url(../images/bg-main.jpg) repeat-y;
 }
 
-#caption {
-	background: #666;
+#twocolumn:after{
+	content : "";
+	clear: both;
+	display:block;
 }
 
-#caption h1 {
-	font: 28px/62px Arial, sans-serif;
-	margin: 0;
+#aside {
+	float: left;
+	width: 232px;
+	margin: -27px 0 0 17px;
+	padding: 15px 0 10px;
+	background: #888;
+}
+
+.h2-holder {
+	padding: 5px 18px;
+}
+
+.h2-holder h2 {
 	color: #fff;
-	margin-left: 285px;
+	font-size: 11px;
 }
 
-#content {
-	height: 415px;
-	background: #333;
-	padding-top: 24px;
-	padding-right: 150px;
-	padding-left: 283px;
+.h2-holder hr {
+	margin: 6px 0 8px;
+	color: #c4c4c4;
+	border: 1px solid #c4c4c4;
 }
 
-#content p {
+.figure {
+	text-align: center;
+	margin: 0 0 20px;
+}
+
+.text-holder {
+	padding: 0 18px;
+}
+
+.text-holder p {
+	font: 11px/13px Verdana, sans-serif;
+	color: #fff;
+	font-weight: 600;
+	padding: 0 0 20px;
+}
+
+#heading-holder {
+	background: #666;
+	padding: 15px 30px 15px 284px;
+}
+
+#heading-holder h1 {
+	font: 28px/30px Arial, sans-serif;
+	color: #fff;
+}
+
+.content-text {
+	padding: 26px 145px 10px 284px;
+}
+
+.content-text p {
 	color: #eee;
 	font-weight: 600;
 	line-height: 16px;
 	margin: 0 0 17px;
-}
-
-
-#aside {
-	width: 232px;
-	height: 369px;
-	float: left;
-	margin: -27px 35px 0 17px;
-	background: #888;
-	position: absolute;
-}
-
-#aside h2 {
-	color: #fff;
-	font-size: 11px;
-	border-bottom: 2px solid #c4c4c4;
-	margin: 0 18px 0 18px;
-	padding: 20px 0 5px 0;
-}
-
-#aside img {
-	display: block;
-	margin: 14px auto 19px;
-}
-
-#aside p {
-	font: 11px/13px Verdana, sans-serif;
-	color: #fff;
-	font-weight: 600;
-	margin-left: 18px;
 }
