@@ -1,54 +1,114 @@
-body {
-	margin: 0;
-	color: #333;
-	font: 11px Arial, Helvetica, sans-serif;
-	background: #ddd;
-}
-img {
-	border-style: none;
-}
-a {
-	text-decoration: none;
-	color: #000;
-}
-a:hover {text-decoration:underline;}
-input,
-textarea,
-select {
-	font: 100% Arial, Helvetica, sans-serif;
-	vertical-align: middle;
-	color: #000;
-}
-form,
-fieldset {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border-style: none;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #ddd;
 }
 
 #wrapper {
 	background: url(../images/bg_body.gif) repeat-x 5px 125px;
 	width: 1200px;
 	margin: 0 auto;
-	height: 500px;
 }
 
 #header {
-	background: url(../images/bg_header.jpg) no-repeat;
+	background: url(../images/bg-header.jpg) no-repeat;
 	width: 960px;
-	height: 124px;
+	height: 97px;
 	margin: 0 auto;
-	position: relative;
+	overflow: hidden;
 }
 
 #logo {
 	display: block;
-	background: url(../images/logo.png);
+	float: left;
 	width: 232px;
 	height: 97px;
-	position: relative;
-	left: 17px;
-	top: 0;
+	margin: 0 0 0 17px;
+}
+
+#logo a {
+	display: block;
+	background: url(../images/logo.png);
+	height: 100%;
+	text-indent: -9999px;
+}
+
+#man-form {
+	float: right;
+	/*width: 168px;*/
+	padding: 7px 5px;
+}
+
+.search-form .text {
+	width: 135px;
+	font: 11px/17px Verdana, sans-serif;
+	margin: 0;
+	padding: 0 0 0 4px;
+	border-width: 1px;
+	vertical-align: middle;
+}
+
+#man-form .btn-go {
+	border: 1px solid #7c7c7c;
+	background: -webkit-linear-gradient(top, #f9f9f9, #e2e2e2);
+	border-radius: 8px;
+	font: 10px/15px Verdana, sans-serif;
+	color: #363636;
+	margin: 0;
+	padding: 0 4px 0 5px;
+	vertical-align: middle;
+}
+
+#man-form .btn-go:hover {
+	background: -webkit-linear-gradient(top, #f9f9f9, #b6e4f7);
 }
 
 #navy {
@@ -124,30 +184,7 @@ fieldset {
 	display: block;
 }
 
-#man-form {
-	width: 200px;
-	position: absolute;
-	right: 6px;
-	top: 7px;
-}
 
-.search-form {
-	float: right;
-}
-
-.text {
-	width: 135px;
-	font: 11px/18px "Times New Roman", serif;
-}
-
-#man-form a {
-	float: right;
-	border: none;
-	width: 24px;
-	height: 15px;
-	margin-left: 4px;
-	margin-top: 3px;
-}
 
 #main {
 	width: 960px;
